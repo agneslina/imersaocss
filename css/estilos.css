@@ -96,15 +96,20 @@ a:hover {
   justify-content: center;
 }
 
-@media (min-width: 560px) {
+@media (min-width: 1100px) {
   .projetos .grid {
-    grid-template-columns: 230px 230px 230px 230px;
+    grid-template-columns: repeat(4,230px);
   }
 }
 
 .img-portfolio {
   width: 120px;
   height: 120px;
+}
+
+.img-portfolio:hover {
+  width: 125px;
+  height: 125px;
 }
 
 .projetos figure {
