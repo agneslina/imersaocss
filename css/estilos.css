@@ -75,7 +75,7 @@ a:hover {
   letter-spacing: 0.2em;
   text-align: center;
   color: rgba(63, 69, 109, 0.267);
-  padding-top: 15px;
+  padding-top: 2em;
 }
 
 .site-title {
@@ -89,10 +89,35 @@ a:hover {
   letter-spacing: 0.15em;
 }
 
-.img-portfolio {
-  width: 180px;
-  height: 180px;
-  display: inline-flex;
+.projetos .grid {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: 240px 240px;
   justify-content: center;
-  align-items: center;
 }
+
+@media (min-width: 560px) {
+  .projetos .grid {
+    grid-template-columns: 230px 230px 230px 230px;
+  }
+}
+
+.img-portfolio {
+  width: 120px;
+  height: 120px;
+}
+
+.projetos figure {
+  text-align: center;
+}
+
+.projetos .credits {
+  font-weight: 500;
+  font-size: 0.5em;
+  letter-spacing: 0.2em;
+  text-align: center;
+  color: rgba(63, 69, 109, 0.267);
+  padding-top: 5em;
+}
+
+
