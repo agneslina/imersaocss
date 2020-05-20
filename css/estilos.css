@@ -27,7 +27,7 @@ body {
 }
   
 header {
-  height: 40vh;
+  min-height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,13 +36,14 @@ header {
 .menu {
   background-color: #e7e7e7;
   position: fixed;
-  width: 100vw;
+  min-width: 100vw;
   top: 0;
+  z-index: 1;
 }
   
 .menu ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
   
 .menu li {
@@ -51,7 +52,7 @@ header {
 
 .menu a {
   display: block;
-  padding: 25px 20px;
+  padding: 20px 20px;
 }
   
 a {
@@ -63,6 +64,11 @@ a:hover {
   text-decoration: underline;
 }
   
+.titles {
+  padding-top: 8em;
+  padding-bottom: 2.5em;
+}
+
 .site-subtitle,
 .site-title {
   text-align: center;
@@ -89,15 +95,24 @@ a:hover {
   letter-spacing: 0.15em;
 }
 
-.projetos .grid {
+.projects,
+.about,
+.contact {
+  padding: 2em;
+  min-height: 50vh;
+}
+
+.projects .grid {
   display: grid;
   gap: 2em;
   grid-template-columns: 240px 240px;
   justify-content: center;
+  align-content: center;
+  height: 40vh;
 }
 
 @media (min-width: 1100px) {
-  .projetos .grid {
+  .projects .grid {
     grid-template-columns: repeat(4,230px);
   }
 }
@@ -105,44 +120,87 @@ a:hover {
 .img-portfolio {
   width: 120px;
   height: 120px;
+  transition: transform 500ms;
 }
 
 .img-portfolio:hover {
-  width: 125px;
-  height: 125px;
+  transform: scale(1.1);
 }
 
-.projetos figure {
+.projects figure {
   text-align: center;
 }
 
-.projetos figcaption {
+.projects figcaption {
   border: solid 1px #e7e7e7;
   font-size: 10pt;
-  height: 2.5em;
-  width: 10em;
   border-radius: 0.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  color: rgb(63, 69, 109);
 }
 
-.projetos figcaption:hover {
+.projects figcaption:hover {
   background-color: #e7e7e7;
 }
 
-.projetos .credits {
+.img-about {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  object-position: 5px 22%;
+  border-radius: 100%;
+}
+
+.about .grid-about {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: 350px 600px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.text-about {
+  line-height: 250%;
+}
+
+.text-about h1 {
+  text-align: left;
+  color: #3c3c3c;
+  font-size: 30pt;
+  font-weight: 900;
+}
+
+.text-about p {
+  text-align: left;
+  color: #3c3c3c;
+  font-size: 14pt;
+  font-weight: 200;
+  line-height: 180%;
+}
+
+.contact .icons {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 25px;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(5,100px);
+  justify-content: center;
+}
+
+.contact a:hover {
+  text-decoration: none;
+  color: rgb(63, 69, 109);
+}
+
+.credits {
   font-weight: 500;
   font-size: 0.5em;
   letter-spacing: 0.2em;
   text-align: center;
   color: rgba(63, 69, 109, 0.267);
-  padding-top: 5em;
-}
-
-.contato {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10vh;
+  padding-top: 2em;
 }
